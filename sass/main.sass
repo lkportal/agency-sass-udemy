@@ -7,6 +7,11 @@
     height: 85vh
     background-size: cover
     background-position: center
+    @include utilities.mobile   
+        height: 100vh
+    nav
+        @include utilities.mobile
+           display: none
 .nav-conteiner
     display: flex
     justify-content: space-between
@@ -17,6 +22,8 @@
     padding: 1.5rem 2rem
     background-color: variables.$black
     z-index: 10
+    @include utilities.mobile
+        padding: 1rem
     .brand
         color: variables.$light-color
         font-size: 2rem 
@@ -24,6 +31,7 @@
     &-navbar
         display: flex
         align-items: center
+        justify-content: flex-end
         height: 100%
         li
             margin: 5px 10px 
@@ -33,7 +41,9 @@
         .fas.fas-bars
             font-size: 2rem
             color: #fff 
-            display: none                     
+            display: none 
+            @include utilities.mobile
+                display: block                    
 .title-conteiner
         color: variables.$light-color 
         display: flex
@@ -41,6 +51,9 @@
         align-items: center
         justify-content: center 
         height: 100%
+        @include utilities.mobile
+            text-align: center
+            padding: 5rem
         h2
             font-size: 2rem
             @extend %title-text-shadow
@@ -52,6 +65,8 @@
     text-align: center
     padding: 2rem      
     margin-bottom:  2rem
+    @include utilities.mobile
+        padding: 2rem 0
     h2
         @extend %section-title    
     .services-card-conteiner
@@ -65,6 +80,9 @@
             padding:2rem
             border: 1px solid #ccc
             transition: .3s
+            @include utilities.mobile
+                width: 100%
+                margin-bottom: 2rem
 
             i
                 color: variables.$primary-color 
@@ -83,11 +101,15 @@
 .jobs-conteiner
     background-color: variables.$secondary-bg   
     padding: 3rem
+    @include utilities.mobile
+        padding: 2rem
     h2
         @extend %section-title
     .jobs-list
         display: flex
         padding: 2rem 0
+        @include utilities.mobile
+            flex-direction: column
         .first-job
             width: 30%
             height: 415px
@@ -96,11 +118,19 @@
             cursor: pointer
             transition: .5s
             @extend %center-bg
-            @extend %card-hover  
+            @extend %card-hover
+            @include utilities.mobile
+                width: 100%
+                height: 200px
+                margin: 0
+                margin-bottom: 2rem  
         .other-jobs-conteiner
             display: flex
             flex-wrap: wrap
             width: 68%
+            @include utilities.mobile
+                width: 100%
+                flex-direction: column 
             .job-card
                 width: 45%
                 height: 200px
@@ -111,7 +141,11 @@
                 margin-right: 15px
                 @extend %center-bg
                 @extend %card-hover
-            #jobs2
+                @include utilities.mobile
+                    width: 100%
+                    height: 200px
+                    margin: 0
+                    margin-bottom: 2rem
                 background-image: url('../assets/job2.jpg')
             #jobs3
                 background-image: url('../assets/job3.jpg')                             
@@ -138,4 +172,54 @@
                 text-align: center
                 color: #fff
                 padding: 1rem
-                font-size: .9rem                     
+                font-size: .9rem 
+footer
+    background-color: variables.$footer-bg 
+    color: variables.$text-color 
+    padding: 5rem 2rem
+    .footer-conteiner
+        max-width: 1200px
+        margin: 0 auto
+        display: flex
+        flex-wrap: wrap
+        @include utilities.mobile
+            max-width: 100%
+            flex-direction: column
+        .footer-title
+            color: #fff
+            font-weight: bold
+            margin-bottom: 1rem
+    .footer-desc-conteiner, .footer-links-conteiner
+        width: 50%
+        @include utilities.mobile
+            width: 100%
+            margin-bottom: 2rem
+            text-align: center
+
+    .footer-desc-container
+        p
+            width: 80%
+            line-height: 1.3
+            @include utilities.mobile
+                width: 100%
+    .footer-links-conteiner
+        display: flex
+        @include utilities.mobile   
+            flex-direction: column
+        &-list 
+            padding: 0 1rem
+            @include utilities.mobile
+                margin-bottom: 2rem
+            li
+                margin-bottom: .5rem
+                color: variables.$text-color 
+                transition: .5s
+                &:hover
+                    color: #fff      
+    .footer-copy-right-conteiner
+        width: 100%
+        margin-top: 3rem
+        @include utilities.mobile
+            text-align: center
+        p
+            margin-bottom: 1rem                                                                          

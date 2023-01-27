@@ -41,6 +41,11 @@
 .jobs-conteiner .jobs-list .first-job .job-card-title, .jobs-conteiner .jobs-list .other-jobs-conteiner .job-card .job-card-title, .jobs-conteiner .jobs-list .first-job .job-card-cover, .jobs-conteiner .jobs-list .other-jobs-conteiner .job-card .job-card-cover, .jobs-conteiner .jobs-list .first-job .job-card-description, .jobs-conteiner .jobs-list .other-jobs-conteiner .job-card .job-card-description {
   opacity: 0;
 }
+@media (max-width: 425px) {
+  .jobs-conteiner .jobs-list .first-job .job-card-title, .jobs-conteiner .jobs-list .other-jobs-conteiner .job-card .job-card-title, .jobs-conteiner .jobs-list .first-job .job-card-cover, .jobs-conteiner .jobs-list .other-jobs-conteiner .job-card .job-card-cover, .jobs-conteiner .jobs-list .first-job .job-card-description, .jobs-conteiner .jobs-list .other-jobs-conteiner .job-card .job-card-description {
+    opacity: 1;
+  }
+}
 .jobs-conteiner .jobs-list .first-job:hover .job-card-title, .jobs-conteiner .jobs-list .other-jobs-conteiner .job-card:hover .job-card-title, .jobs-conteiner .jobs-list .first-job:hover .job-card-cover, .jobs-conteiner .jobs-list .other-jobs-conteiner .job-card:hover .job-card-cover, .jobs-conteiner .jobs-list .first-job:hover .job-card-description, .jobs-conteiner .jobs-list .other-jobs-conteiner .job-card:hover .job-card-description {
   opacity: 1;
 }
@@ -66,6 +71,16 @@ li {
   background-size: cover;
   background-position: center;
 }
+@media (max-width: 425px) {
+  #main-banner {
+    height: 100vh;
+  }
+}
+@media (max-width: 425px) {
+  #main-banner nav {
+    display: none;
+  }
+}
 
 .nav-conteiner {
   display: flex;
@@ -78,6 +93,11 @@ li {
   background-color: #000;
   z-index: 10;
 }
+@media (max-width: 425px) {
+  .nav-conteiner {
+    padding: 1rem;
+  }
+}
 .nav-conteiner .brand {
   color: #fff;
   font-size: 2rem;
@@ -89,6 +109,7 @@ li {
 .nav-conteiner-navbar {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   height: 100%;
 }
 .nav-conteiner-navbar li {
@@ -106,6 +127,11 @@ li {
   color: #fff;
   display: none;
 }
+@media (max-width: 425px) {
+  .nav-conteiner-navbar .fas.fas-bars {
+    display: block;
+  }
+}
 
 .title-conteiner {
   color: #fff;
@@ -114,6 +140,12 @@ li {
   align-items: center;
   justify-content: center;
   height: 100%;
+}
+@media (max-width: 425px) {
+  .title-conteiner {
+    text-align: center;
+    padding: 5rem;
+  }
 }
 .title-conteiner h2 {
   font-size: 2rem;
@@ -128,6 +160,11 @@ li {
   padding: 2rem;
   margin-bottom: 2rem;
 }
+@media (max-width: 425px) {
+  .services-conteiner {
+    padding: 2rem 0;
+  }
+}
 .services-conteiner .services-card-conteiner {
   display: flex;
   flex-wrap: wrap;
@@ -140,6 +177,12 @@ li {
   padding: 2rem;
   border: 1px solid #ccc;
   transition: 0.3s;
+}
+@media (max-width: 425px) {
+  .services-conteiner .services-card-conteiner .services-card {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
 }
 .services-conteiner .services-card-conteiner .services-card i {
   color: #ff5200;
@@ -164,9 +207,19 @@ li {
   background-color: #e5eaff;
   padding: 3rem;
 }
+@media (max-width: 425px) {
+  .jobs-conteiner {
+    padding: 2rem;
+  }
+}
 .jobs-conteiner .jobs-list {
   display: flex;
   padding: 2rem 0;
+}
+@media (max-width: 425px) {
+  .jobs-conteiner .jobs-list {
+    flex-direction: column;
+  }
 }
 .jobs-conteiner .jobs-list .first-job {
   width: 30%;
@@ -176,10 +229,24 @@ li {
   cursor: pointer;
   transition: 0.5s;
 }
+@media (max-width: 425px) {
+  .jobs-conteiner .jobs-list .first-job {
+    width: 100%;
+    height: 200px;
+    margin: 0;
+    margin-bottom: 2rem;
+  }
+}
 .jobs-conteiner .jobs-list .other-jobs-conteiner {
   display: flex;
   flex-wrap: wrap;
   width: 68%;
+}
+@media (max-width: 425px) {
+  .jobs-conteiner .jobs-list .other-jobs-conteiner {
+    width: 100%;
+    flex-direction: column;
+  }
 }
 .jobs-conteiner .jobs-list .other-jobs-conteiner .job-card {
   width: 45%;
@@ -189,9 +256,15 @@ li {
   cursor: pointer;
   margin-bottom: 15px;
   margin-right: 15px;
-}
-.jobs-conteiner .jobs-list .other-jobs-conteiner #jobs2 {
   background-image: url("../assets/job2.jpg");
+}
+@media (max-width: 425px) {
+  .jobs-conteiner .jobs-list .other-jobs-conteiner .job-card {
+    width: 100%;
+    height: 200px;
+    margin: 0;
+    margin-bottom: 2rem;
+  }
 }
 .jobs-conteiner .jobs-list .other-jobs-conteiner #jobs3 {
   background-image: url("../assets/job3.jpg");
@@ -224,6 +297,84 @@ li {
   color: #fff;
   padding: 1rem;
   font-size: 0.9rem;
+}
+
+footer {
+  background-color: #1d1d1d;
+  color: #8b8e94;
+  padding: 5rem 2rem;
+}
+footer .footer-conteiner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (max-width: 425px) {
+  footer .footer-conteiner {
+    max-width: 100%;
+    flex-direction: column;
+  }
+}
+footer .footer-conteiner .footer-title {
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+footer .footer-desc-conteiner, footer .footer-links-conteiner {
+  width: 50%;
+}
+@media (max-width: 425px) {
+  footer .footer-desc-conteiner, footer .footer-links-conteiner {
+    width: 100%;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+}
+footer .footer-desc-container p {
+  width: 80%;
+  line-height: 1.3;
+}
+@media (max-width: 425px) {
+  footer .footer-desc-container p {
+    width: 100%;
+  }
+}
+footer .footer-links-conteiner {
+  display: flex;
+}
+@media (max-width: 425px) {
+  footer .footer-links-conteiner {
+    flex-direction: column;
+  }
+}
+footer .footer-links-conteiner-list {
+  padding: 0 1rem;
+}
+@media (max-width: 425px) {
+  footer .footer-links-conteiner-list {
+    margin-bottom: 2rem;
+  }
+}
+footer .footer-links-conteiner-list li {
+  margin-bottom: 0.5rem;
+  color: #8b8e94;
+  transition: 0.5s;
+}
+footer .footer-links-conteiner-list li:hover {
+  color: #fff;
+}
+footer .footer-copy-right-conteiner {
+  width: 100%;
+  margin-top: 3rem;
+}
+@media (max-width: 425px) {
+  footer .footer-copy-right-conteiner {
+    text-align: center;
+  }
+}
+footer .footer-copy-right-conteiner p {
+  margin-bottom: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */

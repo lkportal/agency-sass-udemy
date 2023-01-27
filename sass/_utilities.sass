@@ -36,6 +36,11 @@
         margin-top: 1rem
         border-radius: 2rem
         padding: 1rem 1.5rem
+//MOBILE
+@mixin mobile 
+    @media (max-width:425px)
+        @content 
+                
 //placeholde selector
 %title-text-shadow
     text-shadow: 3px 2px variables.$black
@@ -49,8 +54,11 @@
 %card-hover
     .job-card-title, .job-card-cover,.job-card-description
         opacity: 0
+        @include mobile
+            opacity: 1
     &:hover
         .job-card-title, .job-card-cover ,.job-card-description
             opacity: 1       
+    
 
 
